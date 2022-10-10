@@ -1,25 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
+import { MdEmail } from "react-icons/md"
+import FadeIn from 'react-fade-in';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    return (
+        <div>
+            <div className={"flex-col justify-around mt-48"}>
+                <FadeIn>
+                    <h1 className="text-center text-7xl font-opensans font-bold text-teal-700">Daan Schar</h1>
+                    <h2 className="text-center text-5xl font-opensans p-6">Developer</h2>
+                </FadeIn>
+
+                <FadeIn delay={400}>
+                    <div>
+                        <p className="text-center text-lg pt-8">Data Science & AI student seeking the next new thing to
+                            learn.</p>
+                        <p className="text-center text-lg pb-6 pt-1">Check out my other pages below and let's talk!</p>
+                    </div>
+                </FadeIn>
+
+                <FadeIn delay={800}>
+                    <Socials/>
+                </FadeIn>
+
+                <Location/>
+
+            </div>
+
+
+        </div>
+    );
+}
+
+const Socials = () => {
+    return (
+        <div className={"flex justify-center gap-16 p-3"}>
+            <a href="https://github.com/DaanSchar" target="_blank" rel="noreferrer">
+                <button>
+                    <AiFillGithub size={"40"} className={"text-teal-900 hover:text-teal-500 transition-all"}/>
+                </button>
+            </a>
+
+            <a href="https://www.linkedin.com/in/daan-schar-437844215/" target="_blank" rel="noreferrer">
+                <button className="">
+                    <AiFillLinkedin size={"40"} className={"text-teal-800 hover:text-teal-500 transition-all"}/>
+                </button>
+            </a>
+
+            <a href="https://google.com" target="_blank" rel="noreferrer">
+                <button>
+                    <MdEmail size={"40"} className={"text-teal-700 hover:text-teal-500 transition-all"}/>
+                </button>
+            </a>
+        </div>
+    )
+}
+
+const Location = () => {
+    return (
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+            href="https://www.google.com/maps/place/Maastricht/@50.8577007,5.4303014,11z/data=!3m1!4b1!4m5!3m4!1s0x47c0e9ec5841069f:0x53eb957bccbea86e!8m2!3d50.8513682!4d5.6909725"
+            target="_blank"
+            rel="noreferrer"
         >
-          Learn React
+            <p className={"absolute bottom-5 left-5 text-teal-900 font-semibold hover:text-teal-500 transition-all"}>Maastricht, Netherlands</p>
         </a>
-      </header>
-    </div>
-  );
+    )
 }
 
 export default App;
