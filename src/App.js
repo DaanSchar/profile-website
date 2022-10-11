@@ -6,17 +6,17 @@ import FadeIn from 'react-fade-in';
 function App() {
     return (
         <div>
-            <div className={"flex-col justify-around mt-48"}>
-                <FadeIn>
-                    <h1 className="text-center text-7xl font-opensans font-bold text-teal-700">Daan Schar</h1>
-                    <h2 className="text-center text-5xl font-opensans p-6">Developer</h2>
+            <div className={"flex-col justify-around mt-48 px-8"}>
+                <FadeIn className="">
+                    <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Daan Schar</h1>
+                    <h2 className="text-center md:text-5xl sm:text-3xl text-xl font-opensans md:p-6 sm:p-4 p-2">Developer</h2>
                 </FadeIn>
 
                 <FadeIn delay={400}>
                     <div>
-                        <p className="text-center text-lg pt-8">Data Science & AI student seeking the next new thing to
+                        <p className="text-center md:text-lg sm:text-sm text-xs md:pt-8 sm:pt-6 pt-4 px-2">Data Science & AI student seeking the next new thing to
                             learn.</p>
-                        <p className="text-center text-lg pb-6 pt-1">Check out my other pages below and let's talk!</p>
+                        <p className="text-center md:text-lg sm:text-sm text-xs pb-6 pt-1 px-5">Check out my other pages below and let's talk!</p>
                     </div>
                 </FadeIn>
 
@@ -64,7 +64,7 @@ const Location = () => {
             target="_blank"
             rel="noreferrer"
         >
-            <p className={"absolute bottom-5 left-5 text-teal-900 font-semibold hover:text-teal-500 transition-all"}>Maastricht, Netherlands</p>
+            <p className={"absolute bottom-5 left-5 md:text-base sm:text-sm xs:text-xs text-teal-900 font-semibold hover:text-teal-500 transition-all"}>Maastricht, Netherlands</p>
         </a>
     )
 }
