@@ -6,13 +6,15 @@ import FadeIn from 'react-fade-in';
 function App() {
     return (
         <div>
-            <div className={"flex-col justify-around mt-48 px-8"}>
-                <FadeIn className="">
-                    <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Daan Schar</h1>
-                    <h2 className="text-center md:text-5xl sm:text-3xl text-xl font-opensans md:p-6 sm:p-4 p-2">Developer</h2>
+            <div className={"flex-col justify-around px-8 h-screen"}>
+                <FadeIn className="h-1/3 grid content-end">
+                    <div>
+                        <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Daan Schar</h1>
+                        <h2 className="text-center md:text-5xl sm:text-3xl text-xl font-opensans md:p-6 sm:p-4 p-2">Developer</h2>
+                    </div>
                 </FadeIn>
 
-                <FadeIn delay={400}>
+                <FadeIn delay={400} className="h-1/3 grid content-start">
                     <div>
                         <p className="text-center md:text-lg sm:text-sm text-xs md:pt-8 sm:pt-6 pt-4 px-2">Data Science & AI student seeking the next new thing to
                             learn.</p>
@@ -35,24 +37,26 @@ function App() {
 
 const Socials = () => {
     return (
-        <div className={"flex justify-center gap-16 p-3"}>
-            <a href="https://github.com/DaanSchar" target="_blank" rel="noreferrer">
-                <button>
-                    <AiFillGithub size={"40"} className={"text-teal-900 hover:text-teal-500 transition-all"}/>
-                </button>
-            </a>
+        <div className={"grid content-center"}>
+            <div className="flex justify-center gap-16 p-3">
+                <a href="https://github.com/DaanSchar" target="_blank" rel="noreferrer">
+                    <button>
+                        <AiFillGithub size={"40"} className={"text-teal-900 hover:text-teal-500 transition-all"}/>
+                    </button>
+                </a>
 
-            <a href="https://www.linkedin.com/in/daan-schar-437844215/" target="_blank" rel="noreferrer">
-                <button className="">
-                    <AiFillLinkedin size={"40"} className={"text-teal-800 hover:text-teal-500 transition-all"}/>
-                </button>
-            </a>
+                <a href="https://www.linkedin.com/in/daan-schar-437844215/" target="_blank" rel="noreferrer">
+                    <button className="">
+                        <AiFillLinkedin size={"40"} className={"text-teal-800 hover:text-teal-500 transition-all"}/>
+                    </button>
+                </a>
 
-            <a href="https://google.com" target="_blank" rel="noreferrer">
-                <button>
-                    <MdEmail size={"40"} className={"text-teal-700 hover:text-teal-500 transition-all"}/>
-                </button>
-            </a>
+                <a href="https://google.com" target="_blank" rel="noreferrer">
+                    <button>
+                        <MdEmail size={"40"} className={"text-teal-700 hover:text-teal-500 transition-all"}/>
+                    </button>
+                </a>
+            </div>
         </div>
     )
 }
