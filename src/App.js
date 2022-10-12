@@ -1,7 +1,8 @@
 import React from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-import { MdEmail } from "react-icons/md"
+import {AiFillGithub, AiFillLinkedin} from "react-icons/ai"
+import {MdEmail} from "react-icons/md"
 import FadeIn from 'react-fade-in';
+import Fade from 'react-reveal/Fade';
 
 function App() {
     return (
@@ -9,16 +10,19 @@ function App() {
             <div className={"flex-col justify-around px-8 h-screen"}>
                 <FadeIn className="h-1/3 grid content-end">
                     <div>
-                        <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Daan Schar</h1>
+                        <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Daan
+                            Schar</h1>
                         <h2 className="text-center md:text-5xl sm:text-3xl text-xl font-opensans md:p-6 sm:p-4 p-2">Developer</h2>
                     </div>
                 </FadeIn>
 
                 <FadeIn delay={400} className="h-1/3 grid content-start">
                     <div>
-                        <p className="text-center md:text-lg sm:text-sm text-xs md:pt-8 sm:pt-6 pt-4 px-2">Data Science & AI student seeking the next new thing to
+                        <p className="text-center md:text-lg sm:text-sm text-xs md:pt-8 sm:pt-6 pt-4 px-2">Data Science
+                            & AI student seeking the next new thing to
                             learn.</p>
-                        <p className="text-center md:text-lg sm:text-sm text-xs pb-6 pt-1 px-5">Check out my other pages below and let's talk!</p>
+                        <p className="text-center md:text-lg sm:text-sm text-xs pb-6 pt-1 px-5">Check out my other pages
+                            below and let's talk!</p>
                     </div>
                 </FadeIn>
 
@@ -26,13 +30,34 @@ function App() {
                     <Socials/>
                 </FadeIn>
 
-                <Location/>
+                {/*<Location/>*/}
 
             </div>
 
+            <div className="h-screen">
+                    <div className="h-1/3 grid content-end">
+                        <Fade bottom>
+                            <div>
+                                <h1 className="text-center md:text-7xl sm:text-5xl text-3xl font-opensans font-bold text-teal-700">Projects</h1>
+                                <h2 className="text-center md:text-5xl sm:text-3xl text-xl font-opensans md:p-6 sm:p-4 p-2">I've worked on</h2>
+                            </div>
+                        </Fade>
+                    </div>
+
+
+
+            </div>
 
         </div>
     );
+}
+
+const ProjectCard = () => {
+    return (
+        <div>
+
+        </div>
+    )
 }
 
 const Socials = () => {
@@ -68,7 +93,8 @@ const Location = () => {
             target="_blank"
             rel="noreferrer"
         >
-            <p className={"absolute bottom-5 left-5 md:text-base sm:text-sm xs:text-xs text-teal-900 font-semibold hover:text-teal-500 transition-all"}>Maastricht, Netherlands</p>
+            <p className={"absolute bottom-5 left-5 md:text-base sm:text-sm xs:text-xs text-teal-900 font-semibold hover:text-teal-500 transition-all"}>Maastricht,
+                Netherlands</p>
         </a>
     )
 }
